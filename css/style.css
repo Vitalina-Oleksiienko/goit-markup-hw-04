@@ -36,6 +36,7 @@ header {
   font-size: 26px;
   line-height: 1.19;
   font-family: Raleway;
+  color: var(--list-color);
 }
 .logo-basement {
   margin-bottom: 20px;
