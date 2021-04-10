@@ -1,0 +1,413 @@
+:root {
+  --text-color: #757575;
+  --logo-color: #2196f3;
+  --list-color: #ffffff;
+  --title-color: #2f303a;
+  --peculiarity-color: #212121;
+  --user-color: #f5f4fa;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background: var(--list-color);
+  font-family: Roboto, sans-serif;
+}
+.container {
+  /* outline: 2px solid green;*/
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  border-bottom: 1px solid#ECECEC;
+}
+.logo-nav {
+  display: flex;
+}
+.logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  width: 145px;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  font-family: Raleway;
+}
+.logo-basement {
+  margin-bottom: 20px;
+  width: 145px;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  font-family: Raleway;
+}
+.logo-footer {
+  color: var(--list-color);
+}
+.logo-header {
+  color: #000;
+}
+/*навигация по сайту*/
+a {
+  text-decoration: none;
+  color: var(--logo-color);
+}
+a:active,
+a:visited {
+  color: var(--logo-color, #2196f3);
+}
+.nav {
+  display: flex;
+}
+
+.site-nav {
+  display: flex;
+  padding-left: 0;
+}
+.site-nav .contact:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav .item-contact {
+  justify-content: flex-end;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav .item:first-child {
+  margin-left: 93px;
+}
+.site-nav .item-contact:not(:last-child) {
+  margin-right: 50px;
+  margin-left: 300px;
+}
+.site-nav .link-nav,
+.link-contact {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  align-items: center;
+}
+.site-nav .link-nav {
+  color: var(--peculiarity-color);
+}
+.site-nav .link-contact {
+  color: var(--text-color);
+}
+.site-nav .link-nav:hover,
+.site-nav .link-nav:focus {
+  color: var(--logo-color, #2196f3);
+}
+.site-nav .link-contact:hover,
+.site-nav .link-contact:focus {
+  color: var(--logo-color, #2196f3);
+}
+.site-nav .link-nav.current {
+  color: var(--logo-color, #2196f3);
+}
+/*курсор для кнопок и ссылок*/
+.pointer {
+  cursor: pointer;
+  width: 200px;
+  /*height: 50px;*/
+  left: 700px;
+  top: 430px;
+}
+/*Эффективные решения для вашего бизнеса*/
+.main {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 1600px;*/
+  /*height: 600px;*/
+  background: var(--title-color, #2f303a);
+  padding: 200px 0;
+  text-align: center;
+  max-width: 1600px;
+  /* background-image: /*linear-gradient(rgba(47, 48, 58, 0.4)),*/ /*url(/images/фон.jpg);*/
+  /*background-position: center;*/
+}
+.title {
+  margin: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  color: var(--list-color, white);
+  width: 696px;
+  height: 120px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* Button */
+.stydio-button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--list-color);
+  background-color: var(--logo-color);
+  font-family: inherit;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio-button {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.portfolio-button {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;  
+}
+.portfolio-button .element:not(:last-child) {
+  display: flex;
+  margin-right: 8px;
+}
+.portfolio-button .item-button:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio-button .element:focus,
+.portfolio-button .element:hover {
+  background: var(--logo-color);
+  border-radius: 4px;
+  color: var(--list-color);
+  box-shadow: 0em 1px 0em rgba(125, 125, 125, 0.5);
+}
+/* Особенности */
+.peculiarity-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.list .list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.list {
+  display: flex;
+  padding-left: 0;
+}
+.peculiarity {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--peculiarity-color, #212121);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+}
+.about-peculiarity {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.visualization-section {
+  padding-bottom: 94px;
+}
+.visualization {
+  display: flex;
+  padding-left: 0;
+}
+.visualization-item {
+  width: 370px;
+  height: 294px;
+}
+.visualization .visualization-item:not(:last-child) {
+  margin-right: 30px;
+}
+.user {
+  background: var(--user-color, #f5f4fa);
+  /*height: 648px;*/
+  width: 1600px;
+  padding-bottom: 94px;
+  padding-top: 94px;
+  /*justify-content: center;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+.studio-card {
+  padding: 20px 24px;
+  text-align: center;
+}
+.main-title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--peculiarity-color, #212121);
+  text-align: center;
+  /*width: 1200px;*/
+  letter-spacing: 0.03em;
+}
+.user-block {
+  display: flex;
+  width: 1200px;
+  padding-left: 0;
+}
+.user-item {
+  width: 270px;
+  border-radius: 0px 0px 4px 4px;
+  border: 2px solid #eeeeee;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--list-color);
+}
+.user-block .user-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: stretch;*/
+  padding-left: 0;
+  width: 1200px;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.gallery-item {
+  display: block;
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 370px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  background-color: var(--list-color);
+  flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+.gallery-item:focus,
+.gallery-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-card {
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 20px 24px;
+}
+
+/*.gallery-item:nth-child(3n) {
+  margin-right: 0;*/
+}
+/*.gallery-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}*/
+/*.gallery-item:nth-child(3n) {
+  margin-right: 0;*/
+}
+.card-element {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.adress {
+  display: block;
+}
+.site-nav .link-footer {
+  margin-bottom: 9px;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--text-color);
+  letter-spacing: 0.03em;
+}
+.site-nav .link-footer:hover,
+.site-nav .link-footer:focus {
+  color: var(--logo-color);
+}
+.adress .link-adress {
+  color: var(--list-color);
+}
+.footer-contact {
+  padding-left: 0;
+}
+.footer-contact .contact {
+  margin-bottom: 9px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+h1 {
+  margin-bottom: 0;
+  text-align: center;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--peculiarity-color, #212121);
+  /*text-align: center;*/
+  letter-spacing: 0.03em;
+}
+button {
+  border-color: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 32px;
+  border-radius: 4px;
+  text-align: center;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--text-color, #757575);
+  /*text-align: center;*/
+  letter-spacing: 0.03em;
+}
+address {
+  font-style: normal;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  color: var(--peculiarity-color, #212121);
+}
+
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 0;
+  background: var(--title-color, #2f303a);
+}
