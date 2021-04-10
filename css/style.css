@@ -16,7 +16,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 .container {
-  /* outline: 2px solid green;*/
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -55,7 +54,7 @@ header {
 /*навигация по сайту*/
 a {
   text-decoration: none;
-  color: var(--logo-color);
+  
 }
 a:active,
 a:visited {
@@ -64,7 +63,29 @@ a:visited {
 .nav {
   display: flex;
 }
+.icon-envelope{
+   display: inline-flex;
+}
+.link-contact:hover .icon-envelope,
+.link-contact:focus .icon-envelope{
+  fill: var(--logo-color);
+}
+.site-nav:hover .icon-smartphone,
+.site-nav:focus .icon-smartphone {
+  fill: var(--logo-color);
+}
+.item-contact .icon-envelope{
+  align-items: center; 
+}
+.item-contact:not(:last-child){
 
+}
+.link-contact .icon-envelope{
+  margin-right: 10px;
+}
+.link-contact .icon-smartphone{
+  margin-right: 10px;
+}
 .site-nav {
   display: flex;
   padding-left: 0;
@@ -83,11 +104,11 @@ a:visited {
 }
 .site-nav .item-contact:not(:last-child) {
   margin-right: 50px;
-  margin-left: 300px;
+  margin-left: 290px;
 }
 .site-nav .link-nav,
 .link-contact {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   font-style: normal;
@@ -135,8 +156,14 @@ a:visited {
   padding: 200px 0;
   text-align: center;
   max-width: 1600px;
-  /* background-image: /*linear-gradient(rgba(47, 48, 58, 0.4)),*/ /*url(/images/фон.jpg);*/
-  /*background-position: center;*/
+  background-image: linear-gradient(
+    to right,
+   rgba(47, 48, 58, 0.4), 
+   rgba(47, 48, 58, 0.4)),
+   url(../images/фон.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .title {
   margin: auto;
@@ -207,6 +234,50 @@ a:visited {
 .list {
   display: flex;
   padding-left: 0;
+}
+.antena::before {
+  content:'';
+  display: block;
+  height: 120px;
+  background-image: url(../images/icon/antenna.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
+}
+.clock::before{
+  content:'';
+  display: block;
+  height: 120px;
+  background-image: url(../images/icon/clock.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
+}
+.diagram::before{
+  content:'';
+  display: block;
+  height: 120px;
+  background-image: url(../images/icon/diagram.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
+}
+.astronaut::before{
+  content:'';
+  display: block;
+  height: 120px;
+  background-image: url(../images/icon/astronaut.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
 }
 .peculiarity {
   font-family: Roboto;
@@ -280,7 +351,84 @@ a:visited {
 .user-block .user-item:not(:last-child) {
   margin-right: 30px;
 }
-
+.social-icons .icon{
+  width: 20px;
+  height: 20px;
+  fill: var(--text-color);
+}
+.social-icons{
+  display: inline-flex;
+  padding-left: 0;
+}
+.social-icons-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.social-icons-item + .social-icons-item{ 
+  margin-left: 10px;
+}
+.social-icons-link:hover .icon,
+.social-icons-link:focus .icon {
+fill: var(--list-color);
+}
+.social-icons-link:hover{
+  background-color: var(--logo-color);
+}
+.client{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1600px;
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+.company{
+  display: flex;
+  align-items: center;
+  margin-top: -30px;
+  margin-left: -30px;
+  padding-left: 0;
+}
+.company-item{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc((100% - 180px) / 6);
+  border: 1px solid #AFB1B8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.company-link {
+  
+  
+}
+.client-icon{
+  
+}
+.company-item .company-icon{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.company-item:hover,
+.company-item:focus {
+  border: 1px solid var(--logo-color);
+}
+.company-link:hover .company-icon,
+.company-link:focus .company-icon{
+  fill: var(--logo-color);
+}
+.company-link .company-icon{
+  fill: #AFB1B8;
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -330,6 +478,34 @@ a:visited {
 }
 .adress {
   display: block;
+  margin-right: 70px;
+}
+.social-icons-footer .icon-footer{
+  width: 20px;
+  height: 20px;
+  fill: var(--list-color);
+}
+.social-icons-footer{
+  display: inline-flex;
+  padding-left: 0;
+}
+.social-icons-link-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  
+}
+.social-icons-footer + .social-icons-footer{ 
+  margin-left: 10px;
+  margin-bottom: 100px;
+}
+.social-icons-link-footer:hover,
+.social-icons-link-footer:focus {
+  background-color: var(--logo-color);
 }
 .site-nav .link-footer {
   margin-bottom: 9px;
@@ -343,6 +519,17 @@ a:visited {
 .site-nav .link-footer:hover,
 .site-nav .link-footer:focus {
   color: var(--logo-color);
+}
+.sosial{
+  
+}
+.footer-list{
+  text-transform: uppercase;
+  color: var(--list-color);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
 }
 .adress .link-adress {
   color: var(--list-color);
@@ -387,7 +574,7 @@ button {
 }
 p {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
@@ -410,4 +597,5 @@ footer {
   padding-bottom: 60px;
   margin-top: 0;
   background: var(--title-color, #2f303a);
+  height: 252px;
 }
