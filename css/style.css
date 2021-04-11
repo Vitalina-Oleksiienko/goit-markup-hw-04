@@ -65,8 +65,14 @@ a:visited {
 .nav {
   display: flex;
 }
-.icon-envelope{
-   display: inline-flex;
+.icon-envelope, .icon-smartphone{
+  display: inline-flex;
+  fill: #AFB1B8;
+   
+}
+.link-contact .icon-envelope{
+  width: 16px;
+  height: 12px;
 }
 .link-contact:hover .icon-envelope,
 .link-contact:focus .icon-envelope{
@@ -381,6 +387,9 @@ fill: var(--list-color);
 .social-icons-link:hover{
   background-color: var(--logo-color);
 }
+.social-icons-link .icon{
+  fill: #AFB1B8;
+}
 .client{
   margin-left: auto;
   margin-right: auto;
@@ -389,36 +398,28 @@ fill: var(--list-color);
   margin-bottom: 94px;
 }
 .company{
-  display: flex;
-  align-items: center;
-  margin-top: -30px;
-  margin-left: -30px;
+  display: inline-flex;
   padding-left: 0;
 }
 .company-item{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  height: 90px;
+  
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc((100% - 180px) / 6);
   border: 1px solid #AFB1B8;
   box-sizing: border-box;
   border-radius: 4px;
 }
 .company-link {
-  
-  
-}
-.client-icon{
-  
-}
-.company-item .company-icon{
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 170px;
+  height: 92px;
+  flex-basis: calc((100% - 180px) / 6);
+}
+.client-icon{
+  width: 106px;
+  height: 60px;
 }
 .company-item:hover,
 .company-item:focus {
@@ -490,6 +491,9 @@ fill: var(--list-color);
 .social-icons-footer{
   display: inline-flex;
   padding-left: 0;
+  width: 206px;
+  height: 44px;
+  
 }
 .social-icons-link-footer{
   display: flex;
@@ -499,11 +503,10 @@ fill: var(--list-color);
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  
 }
 .social-icons-footer + .social-icons-footer{ 
   margin-left: 10px;
-  margin-bottom: 100px;
+  
 }
 .social-icons-link-footer:hover,
 .social-icons-link-footer:focus {
@@ -523,7 +526,17 @@ fill: var(--list-color);
   color: var(--logo-color);
 }
 .sosial{
-  
+  width: 206px;
+  height: 80px;
+  display: inline-flex;
+  flex-basis: calc((50% - 45px) / 2);
+}
+.card-footer{
+  flex-basis: calc((50% - 45px) / 2);
+}
+.footer{
+  display: flex;
+  align-items: center;
 }
 .footer-list{
   text-transform: uppercase;
@@ -532,9 +545,12 @@ fill: var(--list-color);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  margin-bottom: 20px;
+  
 }
 .adress .link-adress {
   color: var(--list-color);
+   white-space: nowrap;
 }
 .footer-contact {
   padding-left: 0;
@@ -600,4 +616,5 @@ footer {
   margin-top: 0;
   background: var(--title-color, #2f303a);
   height: 252px;
+  
 }
