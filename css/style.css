@@ -63,7 +63,10 @@ a:visited {
   color: var(--logo-color, #2196f3);
 }
 .nav {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
+  
+  
 }
 .icon-envelope, .icon-smartphone{
   display: inline-flex;
@@ -78,8 +81,8 @@ a:visited {
 .link-contact:focus .icon-envelope{
   fill: var(--logo-color);
 }
-.site-nav:hover .icon-smartphone,
-.site-nav:focus .icon-smartphone {
+.link-contact:hover .icon-smartphone,
+.link-contact:focus .icon-smartphone {
   fill: var(--logo-color);
 }
 .item-contact .icon-envelope{
@@ -96,13 +99,17 @@ a:visited {
 }
 .site-nav {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   padding-left: 0;
+  margin-left: auto;
 }
 .site-nav .contact:not(:last-child) {
   margin-right: 50px;
 }
 .site-nav .item-contact {
   justify-content: flex-end;
+  margin-left: auto;
 }
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
@@ -116,7 +123,7 @@ a:visited {
 }
 .site-nav .link-nav,
 .link-contact {
-  display: flex;
+  
   padding-top: 32px;
   padding-bottom: 32px;
   font-style: normal;
@@ -203,8 +210,8 @@ a:visited {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.portfolio-button {
-  display: flex;
+.portfolio-button .element {
+  flex-direction: column;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -212,13 +219,17 @@ a:visited {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
+.element {
+  
+}
 .portfolio-button {
+  display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;  
 }
 .portfolio-button .element:not(:last-child) {
-  display: flex;
+  /*display: flex;*/
   margin-right: 8px;
 }
 .portfolio-button .item-button:not(:last-child) {
@@ -229,7 +240,7 @@ a:visited {
   background: var(--logo-color);
   border-radius: 4px;
   color: var(--list-color);
-  box-shadow: 0em 1px 0em rgba(125, 125, 125, 0.5);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* Особенности */
 .peculiarity-section {
@@ -248,7 +259,7 @@ a:visited {
   display: block;
   height: 120px;
   background-image: url(../images/icon/antenna.svg);
-  background-size: contain;
+  background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F5F4FA;
@@ -259,7 +270,7 @@ a:visited {
   display: block;
   height: 120px;
   background-image: url(../images/icon/clock.svg);
-  background-size: contain;
+  background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F5F4FA;
@@ -270,7 +281,7 @@ a:visited {
   display: block;
   height: 120px;
   background-image: url(../images/icon/diagram.svg);
-  background-size: contain;
+  background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F5F4FA;
@@ -281,7 +292,7 @@ a:visited {
   display: block;
   height: 120px;
   background-image: url(../images/icon/astronaut.svg);
-  background-size: contain;
+  background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F5F4FA;
@@ -359,7 +370,7 @@ a:visited {
 .user-block .user-item:not(:last-child) {
   margin-right: 30px;
 }
-.social-icons .icon{
+.social-icons .icon {
   width: 20px;
   height: 20px;
   fill: var(--text-color);
@@ -384,7 +395,8 @@ a:visited {
 .social-icons-link:focus .icon {
 fill: var(--list-color);
 }
-.social-icons-link:hover{
+.social-icons-link:hover,
+.social-icons-link:focus {
   background-color: var(--logo-color);
 }
 .social-icons-link .icon{
@@ -405,9 +417,8 @@ fill: var(--list-color);
   
   margin-top: 30px;
   margin-left: 30px;
-  border: 1px solid #AFB1B8;
   box-sizing: border-box;
-  border-radius: 4px;
+  
 }
 .company-link {
   display: flex;
@@ -415,21 +426,25 @@ fill: var(--list-color);
   align-items: center;
   width: 170px;
   height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
   flex-basis: calc((100% - 180px) / 6);
 }
 .client-icon{
-  width: 106px;
-  height: 60px;
+  
 }
-.company-item:hover,
-.company-item:focus {
+.company-item:hover {
+  
+}
+.company-link:hover,
+.company-link:focus {
   border: 1px solid var(--logo-color);
 }
 .company-link:hover .company-icon,
-.company-link:focus .company-icon{
+.company-link:focus .company-icon {
   fill: var(--logo-color);
 }
-.company-link .company-icon{
+.company-link .company-icon {
   fill: #AFB1B8;
 }
 .gallery {
@@ -530,13 +545,20 @@ fill: var(--list-color);
   height: 80px;
   display: inline-flex;
   flex-basis: calc((50% - 45px) / 2);
+  
 }
 .card-footer{
   flex-basis: calc((50% - 45px) / 2);
+  
 }
 .footer{
   display: flex;
   align-items: center;
+  flex-direction: row;
+  align-items: baseline;
+}
+.footer .sosial, .card-footer {
+  
 }
 .footer-list{
   text-transform: uppercase;
