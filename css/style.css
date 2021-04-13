@@ -119,11 +119,17 @@ a:visited {
 }
 .site-nav .item-contact:not(:last-child) {
   margin-right: 50px;
-  margin-left: 290px;
+  /*margin-left: 290px;*/
+  margin-left: auto;
+}
+.contact:not(:last-child){
+  margin-right: 50px;
+  margin-left: auto;
+  display: flex;
 }
 .site-nav .link-nav,
 .link-contact {
-  
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   font-style: normal;
@@ -217,9 +223,6 @@ a:visited {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-.element {
   
 }
 .portfolio-button {
@@ -227,6 +230,7 @@ a:visited {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;  
+  margin-bottom: 50px;
 }
 .portfolio-button .element:not(:last-child) {
   /*display: flex;*/
@@ -406,8 +410,8 @@ fill: var(--list-color);
   margin-left: auto;
   margin-right: auto;
   width: 1600px;
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .company{
   display: inline-flex;
@@ -467,9 +471,11 @@ fill: var(--list-color);
   background-color: var(--list-color);
   flex-basis: calc((100% - 3 * 30px) / 3);
 }
-
-.gallery-item:focus,
 .gallery-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.gallery .gallery-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
