@@ -39,7 +39,8 @@ header {
   color: var(--list-color);
 }
 .logo-basement {
-  margin-bottom: 20px;
+  display: inline-block;
+  margin-bottom:  20px;
   width: 145px;
   font-weight: bold;
   font-size: 26px;
@@ -70,12 +71,17 @@ a:visited {
 }
 .icon-envelope, .icon-smartphone{
   display: inline-flex;
-  fill: #AFB1B8;
-   
+  fill: #AFB1B8; 
 }
 .link-contact .icon-envelope{
   width: 16px;
   height: 12px;
+}
+.contact-header{
+  display: inline-flex;
+  justify-self: flex-end;
+  margin-left: auto;
+  
 }
 .link-contact:hover .icon-envelope,
 .link-contact:focus .icon-envelope{
@@ -97,12 +103,17 @@ a:visited {
 .link-contact .icon-smartphone{
   margin-right: 10px;
 }
+.iten-contact{
+  display: flex;
+  margin-left: auto;
+}
 .site-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-left: 0;
   margin-left: auto;
+  margin-right: auto;
 }
 .site-nav .contact:not(:last-child) {
   margin-right: 50px;
@@ -125,7 +136,7 @@ a:visited {
 .contact:not(:last-child){
   margin-right: 50px;
   margin-left: auto;
-  display: flex;
+  
 }
 .site-nav .link-nav,
 .link-contact {
@@ -459,9 +470,13 @@ fill: var(--list-color);
   width: 1200px;
   margin-top: -30px;
   margin-left: -30px;
+  
+}
+.gallery-item-link{
+  display: block;
 }
 .gallery-item {
-  display: block;
+  
   margin-top: 30px;
   margin-left: 30px;
   width: 370px;
@@ -478,7 +493,17 @@ fill: var(--list-color);
 .gallery .gallery-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    outline: none;
 }
+ .gallery-item .gallery-item-link:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.gallery-item:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-card {
   border: 1px solid #eeeeee;
   border-radius: 5px;
@@ -501,7 +526,6 @@ fill: var(--list-color);
   letter-spacing: 0.06em;
 }
 .adress {
-  display: block;
   margin-right: 70px;
 }
 .social-icons-footer .icon-footer{
@@ -555,7 +579,7 @@ fill: var(--list-color);
 }
 .card-footer{
   flex-basis: calc((50% - 45px) / 2);
-  
+  display: block;
 }
 .footer{
   display: flex;
@@ -630,6 +654,7 @@ p {
 }
 address {
   font-style: normal;
+
 }
 ul {
   margin-top: 0;
