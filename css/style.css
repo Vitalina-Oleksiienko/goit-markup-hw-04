@@ -138,6 +138,9 @@ a:visited {
   margin-left: auto;
   
 }
+.contact-header{
+  float: right;
+}
 .site-nav .link-nav,
 .link-contact {
   display: flex;
